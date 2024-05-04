@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "23879df8-aeb8-417f-8ab7-f13b14dce110",
+		"name": "SwaggerEndPoint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15084454"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"ADMIN\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/log-in",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"log-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBRE1JTiIsIm5iZiI6MTcxNDg1ODU5OCwiaXNzIjoiQVVUSDBKV1QtQkFDS0VORCIsImV4cCI6MTcxNDg2MDM5OCwiaWF0IjoxNzE0ODU4NTk4LCJhdXRob3JpdGllcyI6IkNSRUFURV9VU0VSLElOVkFMSURfVVNFUixSRUFEX0NIQVJBQ1RFUixSRUFEX0NPTUlDLFJPTEVfQURNSU4iLCJqdGkiOiJlYzc4ZjgzOS1hNGQ4LTQ5YWMtOTc4Yi0wYzMxYzkzMjkxNDIifQ.YKMjrT7d_AJGuIS2MVwqHQ48NwxWQu-0OmaBSCcAGgI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"santiago\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/club/findAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"club",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBRE1JTiIsIm5iZiI6MTcxNDg1ODU5OCwiaXNzIjoiQVVUSDBKV1QtQkFDS0VORCIsImV4cCI6MTcxNDg2MDM5OCwiaWF0IjoxNzE0ODU4NTk4LCJhdXRob3JpdGllcyI6IkNSRUFURV9VU0VSLElOVkFMSURfVVNFUixSRUFEX0NIQVJBQ1RFUixSRUFEX0NPTUlDLFJPTEVfQURNSU4iLCJqdGkiOiJlYzc4ZjgzOS1hNGQ4LTQ5YWMtOTc4Yi0wYzMxYzkzMjkxNDIifQ.YKMjrT7d_AJGuIS2MVwqHQ48NwxWQu-0OmaBSCcAGgI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"santiago\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/club/find/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"club",
+						"find",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBRE1JTiIsIm5iZiI6MTcxNDg1ODU5OCwiaXNzIjoiQVVUSDBKV1QtQkFDS0VORCIsImV4cCI6MTcxNDg2MDM5OCwiaWF0IjoxNzE0ODU4NTk4LCJhdXRob3JpdGllcyI6IkNSRUFURV9VU0VSLElOVkFMSURfVVNFUixSRUFEX0NIQVJBQ1RFUixSRUFEX0NPTUlDLFJPTEVfQURNSU4iLCJqdGkiOiJlYzc4ZjgzOS1hNGQ4LTQ5YWMtOTc4Yi0wYzMxYzkzMjkxNDIifQ.YKMjrT7d_AJGuIS2MVwqHQ48NwxWQu-0OmaBSCcAGgI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Liverpool\",\r\n    \"country\": \"Inglaterra\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/club/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"club",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBRE1JTiIsIm5iZiI6MTcxNDg1ODU5OCwiaXNzIjoiQVVUSDBKV1QtQkFDS0VORCIsImV4cCI6MTcxNDg2MDM5OCwiaWF0IjoxNzE0ODU4NTk4LCJhdXRob3JpdGllcyI6IkNSRUFURV9VU0VSLElOVkFMSURfVVNFUixSRUFEX0NIQVJBQ1RFUixSRUFEX0NPTUlDLFJPTEVfQURNSU4iLCJqdGkiOiJlYzc4ZjgzOS1hNGQ4LTQ5YWMtOTc4Yi0wYzMxYzkzMjkxNDIifQ.YKMjrT7d_AJGuIS2MVwqHQ48NwxWQu-0OmaBSCcAGgI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Inter Miami\",\r\n    \"country\": \"USA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/club/update/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"club",
+						"update",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJBRE1JTiIsIm5iZiI6MTcxNDg1ODU5OCwiaXNzIjoiQVVUSDBKV1QtQkFDS0VORCIsImV4cCI6MTcxNDg2MDM5OCwiaWF0IjoxNzE0ODU4NTk4LCJhdXRob3JpdGllcyI6IkNSRUFURV9VU0VSLElOVkFMSURfVVNFUixSRUFEX0NIQVJBQ1RFUixSRUFEX0NPTUlDLFJPTEVfQURNSU4iLCJqdGkiOiJlYzc4ZjgzOS1hNGQ4LTQ5YWMtOTc4Yi0wYzMxYzkzMjkxNDIifQ.YKMjrT7d_AJGuIS2MVwqHQ48NwxWQu-0OmaBSCcAGgI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/club/delete/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"club",
+						"delete",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
