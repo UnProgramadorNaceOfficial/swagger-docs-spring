@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SpringBootSwagger" />
+        <module name="SpringBootSwagger (2)" />
         <module name="SpringBootSwagger (1)" />
       </profile>
     </annotationProcessing>
@@ -15,6 +16,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="SpringBootSwagger" options="-parameters" />
       <module name="SpringBootSwagger (1)" options="-parameters" />
+      <module name="SpringBootSwagger (2)" options="-parameters" />
     </option>
   </component>
 </project>
