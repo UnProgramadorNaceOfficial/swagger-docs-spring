@@ -7,7 +7,7 @@ import lombok.*;
 @Getter
 @Builder
 @Entity
-@Table(name = "clubes")
+@Table(name = "clubes") // Table name should be "clubs"
 @AllArgsConstructor
 @NoArgsConstructor
 public class ClubEntity {

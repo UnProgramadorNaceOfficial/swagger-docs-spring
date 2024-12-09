@@ -25,7 +25,7 @@ public class ClubServiceImpl implements IClubService {
 
     @Override
     public ClubDTO findById(Long id) {
-        ClubEntity userEntity = this.clubRepository.findById(id).orElseGet(() -> new ClubEntity());
+        ClubEntity userEntity = this.clubRepository.findById(id).orElseGet(ClubEntity::new);
         return this.modelMapper.map(userEntity, ClubDTO.class);
     }
 
@@ -41,7 +41,7 @@ public class ClubServiceImpl implements IClubService {
     @Override
     public ClubDTO updateClub(Long id, ClubDTO clubDTO) {
 
-        ClubEntity currentClubEntity = this.clubRepository.findById(id).orElseThrow(() -> new UserNotFoundException("Usuario con id " + id + " no existe."));
+        ClubEntity currentClubEntity = this.clubRepository.findById(id).orElseThrow(() -> new UserNotFoundException("User with ID " + id + " doesnt exist."));
 
         currentClubEntity.setName(clubDTO.getName());
         currentClubEntity.setCountry(clubDTO.getCountry());
@@ -54,10 +54,10 @@ public class ClubServiceImpl implements IClubService {
     @Override
     public String deleteClub(Long id) {
 
-        ClubEntity currentClubEntity = this.clubRepository.findById(id).orElseThrow(() -> new UserNotFoundException("Usuario con id " + id + " no existe."));
+        ClubEntity currentClubEntity = this.clubRepository.findById(id).orElseThrow(() -> new UserNotFoundException("User with ID " + id + " doesnt exist."));
 
         this.clubRepository.delete(currentClubEntity);
 
-        return "Usuario eliminado correctamente.";
+        return "User correctly removed.";
     }
 }
