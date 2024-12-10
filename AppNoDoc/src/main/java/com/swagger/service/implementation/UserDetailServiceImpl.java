@@ -36,7 +36,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) {
 
-        UserEntity userEntity = userRepository.findUserEntityByUsername(username).orElseThrow(() -> new UsernameNotFoundException("El usuario " + username + " no existe."));
+        UserEntity userEntity = userRepository.findUserEntityByUsername(username).orElseThrow(() -> new UsernameNotFoundException("The user " + username + " doesnt exist."));
 
         List<SimpleGrantedAuthority> authorityList = new ArrayList<>();
 
@@ -57,15 +57,14 @@ public class UserDetailServiceImpl implements UserDetailsService {
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
         String accessToken = jwtUtils.createToken(authentication);
-        AuthResponse authResponse = new AuthResponse(username, "User loged succesfully", accessToken, true);
-        return authResponse;
+        return new AuthResponse(username, "User loged succesfully", accessToken, true);
     }
 
     public Authentication authenticate(String username, String password) {
         UserDetails userDetails = this.loadUserByUsername(username);
 
         if (userDetails == null) {
-            throw new BadCredentialsException(String.format("Invalid username or password"));
+            throw new BadCredentialsException("Invalid username or password");
         }
 
         if (!passwordEncoder.matches(password, userDetails.getPassword())) {

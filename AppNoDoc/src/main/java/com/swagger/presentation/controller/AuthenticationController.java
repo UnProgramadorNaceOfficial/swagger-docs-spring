@@ -17,8 +17,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/auth")
 public class AuthenticationController {
 
-    @Autowired
-    private UserDetailServiceImpl userDetailService;
+    private final UserDetailServiceImpl userDetailService;
+
+    public AuthenticationController(UserDetailServiceImpl userDetailService) {
+        this.userDetailService = userDetailService;
+    }
 
     @PostMapping("/log-in")
     public ResponseEntity<AuthResponse> login(@RequestBody AuthLoginRequest userRequest) {

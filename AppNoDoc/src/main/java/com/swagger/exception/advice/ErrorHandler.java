@@ -21,7 +21,7 @@ public class ErrorHandler extends ResponseEntityExceptionHandler {
         errorMap.put("Message", exception.getMessage());
         errorMap.put("Code", HttpStatus.NOT_FOUND);
 
-        return new ResponseEntity(errorMap, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(errorMap, HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(BadCredentialsException.class)
@@ -30,6 +30,6 @@ public class ErrorHandler extends ResponseEntityExceptionHandler {
         errorMap.put("Message", exception.getMessage());
         errorMap.put("Code", HttpStatus.NOT_FOUND);
 
-        return new ResponseEntity(errorMap, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(errorMap, HttpStatus.NOT_FOUND);
     }
 }
